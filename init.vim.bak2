@@ -1,0 +1,26 @@
+" Szuruburu vimrc
+" Last Update March 6 2019
+
+set nocompatible
+set fillchars+=vert:│
+
+set autoindent
+set shiftwidth=4
+set noexpandtab
+set tabstop=4
+set linebreak
+set novb
+set ruler
+set scrolloff=20
+set showmatch
+set shortmess=I
+set showcmd
+set showmode
+set sidescroll=1
+set sidescrolloff=7
+set smartcase
+set undolevels=1000
+set nrformats-=octal
+set vb
+set splitbelow
+

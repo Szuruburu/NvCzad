@@ -95,7 +95,7 @@ local default_plugins = {
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",
-    ft = { "gitcommit", "diff" },
+    ft = "gitcommit",
     init = function()
       -- load gitsigns only when a git file is opened
       vim.api.nvim_create_autocmd({ "BufRead" }, {
@@ -190,6 +190,7 @@ local default_plugins = {
         "hrsh7th/cmp-path",
       },
     },
+
     opts = function()
       return require "plugins.configs.cmp"
     end,
@@ -200,7 +201,7 @@ local default_plugins = {
 
   {
     "numToStr/Comment.nvim",
-    keys = { "gcc", "gbc" },
+    -- keys = { "gc", "gb" },
     init = function()
       require("core.utils").load_mappings "comment"
     end,
@@ -232,9 +233,11 @@ local default_plugins = {
     init = function()
       require("core.utils").load_mappings "telescope"
     end,
+
     opts = function()
       return require "plugins.configs.telescope"
     end,
+
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "telescope")
       local telescope = require "telescope"
@@ -253,6 +256,9 @@ local default_plugins = {
     keys = { "<leader>", '"', "'", "`", "c", "v" },
     init = function()
       require("core.utils").load_mappings "whichkey"
+    end,
+    opts = function()
+      return require "plugins.configs.whichkey"
     end,
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "whichkey")

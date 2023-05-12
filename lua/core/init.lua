@@ -2,8 +2,7 @@ local opt = vim.opt
 local g = vim.g
 local config = require("core.utils").load_config()
 
--------------------------------------- globals -----------------------------------------
-g.nvchad_theme = config.ui.theme
+-------------------------------------- globals ----------------------------------------- g.nvchad_theme = config.ui.theme
 g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
@@ -16,7 +15,8 @@ opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
 -- Indenting
-opt.expandtab = true
+-- exapndtab = true - spaces
+opt.expandtab = false
 opt.shiftwidth = 2
 opt.smartindent = true
 opt.tabstop = 2
@@ -34,7 +34,6 @@ opt.ruler = false
 
 -- disable nvim intro
 opt.shortmess:append "sI"
-
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
